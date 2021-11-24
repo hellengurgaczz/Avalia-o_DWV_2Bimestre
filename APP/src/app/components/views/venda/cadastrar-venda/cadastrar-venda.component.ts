@@ -15,7 +15,7 @@ import { ItemVenda } from './../../../../models/item-venda';
 })
 export class CadastrarVendaComponent implements OnInit {
 
-  nomeCliente!:string;
+  cliente!:string;
   formaPagamentoId!:number;
   formas!: FormasPag[];
   itemVendaId!: number;
@@ -34,7 +34,7 @@ export class CadastrarVendaComponent implements OnInit {
 
   cadastrar(): void{
     let venda : Venda = {
-      cliente: this.nomeCliente,
+      cliente: this.cliente,
       formaId: this.formaPagamentoId,
       itemVendaId: this.itemVendaId,
     };
