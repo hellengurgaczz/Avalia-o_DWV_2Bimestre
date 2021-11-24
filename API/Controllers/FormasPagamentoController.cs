@@ -10,11 +10,11 @@ namespace API.Controllers
     public class FormasPagamentoController
     {
 
-        public class FormaPagamento : ControllerBase
+        public class Form : ControllerBase
         {
             private readonly DataContext _context;
 
-            public FormaPagamento(DataContext context) => _context = context;
+            public FormasPagamentoController(DataContext context) => _context = context;
 
 
             //POST: api/pagamento/create
@@ -26,6 +26,7 @@ namespace API.Controllers
                 _context.SaveChanges();
                 return Created("", FormaPagamento);
             }
+
         }
     }
 }
