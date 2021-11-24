@@ -1,0 +1,9 @@
+### Cadastrar forma de pagamento
+POST https://localhost:5001/api/pagamento/create
+Content-Type: application/json
+
+{
+    "Id" : "1",
+    "Forma": "Cartão de Credito",
+    "Desconto": "true",
+}
