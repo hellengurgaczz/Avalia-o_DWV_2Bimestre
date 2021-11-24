@@ -6,7 +6,7 @@ namespace API.Models
     public class FormaPagamento
     {
         public FormaPagamento() => CriadoEm = DateTime.Now;
-        public int Id { get; set; }
+        public int FormaId { get; set; }
         public string Forma { get; set; }
         public string Desconto { get; set; }
         public DateTime CriadoEm { get; set; }

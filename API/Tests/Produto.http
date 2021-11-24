@@ -5,5 +5,5 @@ Content-Type: application/json
 {
     "Id" : "1",
     "Forma": "Cartão de Credito",
-    "Desconto": "true",
+    "Desconto": "25%",
 }

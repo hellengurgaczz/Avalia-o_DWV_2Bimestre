@@ -1,20 +1,20 @@
 using API.Data;
 using API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
+    [ApiController]
+    [Route("api/pagamento")]
     public class FormasPagamentoController
     {
-        [ApiController]
-        [Route("api/pagamento")]
 
-        public class ProdutoController : ControllerBase
+        public class FormaPagamento : ControllerBase
         {
-            private const string V = "create";
             private readonly DataContext _context;
 
-            public ProdutoController(DataContext context) => _context = context;
+            public FormaPagamento(DataContext context) => _context = context;
 
 
             //POST: api/pagamento/create
@@ -26,7 +26,6 @@ namespace API.Controllers
                 _context.SaveChanges();
                 return Created("", FormaPagamento);
             }
-
         }
     }
 }
